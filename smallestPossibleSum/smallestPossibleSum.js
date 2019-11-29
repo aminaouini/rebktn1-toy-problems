@@ -28,3 +28,18 @@
 // Additional notes:
 
 // There are performance tests consisted of very big numbers and arrays of size at least 30000. Please write an efficient algorithm to prevent timeout.
+
+function smallestPossibleSum( array ) {
+	let X = [6, 9, 21];
+	
+
+	for (let i of X) {
+		for (let j of array) {
+			if (i > j && i === (i - j)) {
+				return j;
+			}
+
+		}
+	}
+
+}
