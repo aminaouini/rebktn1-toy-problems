@@ -34,5 +34,40 @@
 
 
 var bubbleSort = function(array) {
-  // Your code here.
+  // take the first element comparet to the second 
+  // make the bigger element on the right and the other on the left and so on
+  let newArr = array;
+  for (let i = 0; i < newArr.length; i++) {
+  	if (i < newArr.length-1) {
+  		let comparenum1 = newArr[i];
+  		let comparenum2 = newArr[i+1];
+
+  		if (comparenum1 < comparenum2) {
+  			
+  			newArr[i] = comparenum1;
+  			newArr[i+1] = comparenum2;
+  		}
+  		if (comparenum1 > comparenum2) {
+  			
+  			newArr[i+1] = comparenum1;
+  			newArr[i] = comparenum2;
+  		}
+  	}
+  	if (i === newArr.length-1) {
+  		let comparenum1 = newArr[i];
+  		let comparenum2 = newArr[i-1];
+  		if (comparenum1 < comparenum2) {
+
+  			newArr[i-1] = comparenum2;
+  			newArr[i] = comparenum1;
+  		}
+  		if (comparenum1 > comparenum2) {
+
+  			newArr[i] = comparenum1;
+  			newArr[i-1] = comparenum2;
+  		}
+  	}
+  }
+
+  return newArr;
 };
