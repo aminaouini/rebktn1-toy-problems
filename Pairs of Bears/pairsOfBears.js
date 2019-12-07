@@ -37,3 +37,28 @@ function pairsOfbears(expectation, zooAnimals) {
 	return [result, false]
 
 }
+
+function pairsOfbears(expectation, zooAnimals) {
+	var count = 0;
+	var result = '';
+	var counter = '';
+	for (var i = 0; i < zooAnimals.length -1; i++) {
+		if(counter === '' && zooAnimals[i] === "B" || counter === '' && zooAnimals[i] === "8") {
+			counter += zooAnimals[i]
+			
+		}
+		if (counter === 'B' && zooAnimals[i] === '8') { counter += zooAnimals[i] }
+		if (counter === '8' && zooAnimals[i] === 'B') { counter += zooAnimals[i] }
+
+		if ( counter === 'B8' ||counter === '8B') {
+			result += counter;
+			counter = '';
+			count++;
+		}
+	}
+	if (count >= expectation) {
+		return [result, true]
+	}
+	return [result, false]
+
+}
