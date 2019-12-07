@@ -20,3 +20,20 @@ x will always be a positive integer, and s will never be empty
 
 
 */
+
+function pairsOfbears(expectation, zooAnimals) {
+	var count = 0;
+	var result = '';
+
+	for (var i = 0; i < zooAnimals.length -1; i++) {
+		if( zooAnimals[i] + zooAnimals[i+1] === "B8" || zooAnimals[i] + zooAnimals[i+1] === "8B") {
+			result += zooAnimals[i] + zooAnimals[i+1];
+			count++;
+		}
+	}
+	if (count >= expectation) {
+		return [result, true]
+	}
+	return [result, false]
+
+}
