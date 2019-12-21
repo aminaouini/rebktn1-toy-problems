@@ -1,4 +1,4 @@
-'use strict';
+var Promise = require('promise');
 
 /* Implement the function asyncMap:
  *
@@ -42,3 +42,21 @@ var asyncMap = function(tasks, callback) {
 
     return callback([tasks[0], tasks[1]])
 };
+
+asyncMap([
+  function(cb){
+    setTimeout(function(){
+      cb('one');
+    }, 200);
+  },
+  function(cb){
+    setTimeout(function(){
+      cb('two');
+    }, 100);
+  }
+ ],
+  function(results){
+    // the results array will equal ['one','two'] even though
+    // the second function had a shorter timeout.
+    console.log(results); // ['one', 'two']
+ });
