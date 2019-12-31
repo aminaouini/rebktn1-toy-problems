@@ -9,11 +9,18 @@ zeroSum([ 5, 7, 2, 9 ]) // false
 */
 
 function zeroSum(arr) {
-
+    let cur;
+    let ind = 0;
     for (let i = 0; i < arr.length; i++) {
+        if (i === 0) {
+            cur = arr[i]
+        }
 
-        for (let j = 0; j < arr.length; j++) {
-            if (arr[i] + arr[j] === 0) return true
+        if (arr[i] + cur === 0) return true
+        if (i === arr.length - 1 && ind !== arr.length) {
+            ind++;
+            cur = arr[ind]
+            i = ind
         }
     }
 
