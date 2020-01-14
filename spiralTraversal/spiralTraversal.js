@@ -66,6 +66,7 @@ function spiralTraversal(array) {
 
   // }
 
+
   if (checker % 4 === 0) {
     for (let i = array.length - left; i > -1; i--) {
       const elem = array[i];
@@ -89,6 +90,7 @@ function spiralTraversal(array) {
   } else if (checker % 2 === 0) {
 
   }
+
 
 
   return result;
