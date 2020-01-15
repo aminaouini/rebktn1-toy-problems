@@ -88,8 +88,10 @@ Tree.prototype.removeChild = function (child) {
   }
 };
 
-Tree.prototype.countLeaves = () => {
+Tree.prototype.countLeaves = function () {
   var max = 0;
+
+  if (!this.children.length) return 1;
 
   for (var i = 0; i < this.children.length; i++) {
     const child = this.children[i];
