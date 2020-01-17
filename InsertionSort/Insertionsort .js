@@ -25,4 +25,30 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-var insertionSortList = function(head) {};
+var insertionSortList = function (head) {
+    // let currNode = head;
+    // let result = new ListNode(currNode.val);
+    // while (currNode.next) {
+    //     if (result.val < currNode.val) {
+    //         let iter = result;
+    //         while (result.next) {
+    //             if (iter.val < result.val) {
+
+    //             }
+    //         }
+    //     }
+    //     if (result.val > currNode.val) {
+
+    //     }
+
+
+    // }
+
+    if (!result && !currNode) {
+        var currNode = head;
+        var result = new ListNode(currNode.val);
+    }
+    if (currNode.val < result.val) {
+        let helper = 
+    }
+};
