@@ -31,7 +31,7 @@ var hasCycle = function (linkedList) {
   let Llist = linkedList;
   let nodeVals = {};
 
-  while (Llist.value) {
+  while (Llist.next) {
     if (nodeVals[Llist.value]) {
       return true
     }
