@@ -28,8 +28,8 @@ function coinSums(total) {
     let z = total / 5;
     result.push(`${z} * 5p`)
   }
-  if (total % 5 === 1) {
-    let z = total - 1 / 2;
+  if (total % 5 !== 0) {
+    let z = total / 2;
     result.push(`${z} * 2p + 1 * 1p`)
   }
 
@@ -38,4 +38,20 @@ function coinSums(total) {
     result.push(`${z} * 2p`)
   }
 
+  if (total % 50 === 0) {
+    let z = total / 50;
+    result.push(`${z} * 50p`)
+  }
+  if (total % 50 !== 0) {
+    let z = total / 20;
+    result.push(`${z} * 20p + 1 * 10p`)
+  }
+
+  if (total % 20 === 0) {
+    let z = total / 20;
+    result.push(`${z} * 20p`)
+  }
+
+
+  return result;
 }
