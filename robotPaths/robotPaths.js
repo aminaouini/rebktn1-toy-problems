@@ -29,15 +29,18 @@ function makeBoard(n) {
       board[i].push(false);
     }
   }
-  board.togglePiece = function(i, j) {
+  board.togglePiece = function (i, j) {
     this[i][j] = !this[i][j];
   };
-  board.hasBeenVisited = function(i, j) {
+  board.hasBeenVisited = function (i, j) {
     return !!this[i][j];
   };
   return board;
 }
 
 function robotPaths(n) {
-  // your code here...
+  if (n > 6) return 'max number is 6 !!'
+  let path = makeBoard(n);
+
+
 }
