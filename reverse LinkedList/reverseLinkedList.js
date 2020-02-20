@@ -19,24 +19,28 @@ Constraint 3: Do not mutate the original nodes by adding any new properties
 // Helpers
 
 function Node(val) {
-  var obj = {};
-  obj.value = val || null;
-  obj.next = null;
-  return obj;
+    var obj = {};
+    obj.value = val || null;
+    obj.next = null;
+    return obj;
 }
 
 var reverseLinkedList = function (linkedList) {
-  var result;
-  while (linkedList.value) {
-    if (result) {
-      let help = new Node(linkedList.value);
-      help.next = result;
-      result = help
-    } else if (!result) {
-      result = new Node(linkedList.value)
+    var result;
+    while (linkedList.value) {
+        if (result) {
+            let help = new Node(linkedList.value);
+            help.next = result;
+            result = help
+        } else if (!result) {
+            result = new Node(linkedList.value)
+        }
+        console.log(linkedList)
+        if (linkedList.next) {
+            linkedList = linkedList.next
+        } else if (!linkedList.next) {
+            break;
+        }
     }
-
-    linkedList = linkedList.next
-  }
-  return result;
+    return result;
 };
