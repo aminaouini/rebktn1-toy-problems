@@ -1,4 +1,4 @@
-// Given a roman numeral as input, write a function that converts the roman numeral to a number and outputs it.
+e// Given a roman numeral as input, write a function that converts the roman numeral to a number and outputs it.
 
 // In a roman numeral, each character adds its value to the total. See the helper object DIGIT_VALUES for the correspondence between roman numeral characters and integers.
 // VI = 6 (5 + 1 = 6)
@@ -14,17 +14,16 @@
 
 // You've got Helpers!
 
-// var DIGIT_VALUES = {
-//     I: 1,
-//     V: 5,
-//     X: 10,
-//     L: 50, 
-//     C: 100,
-//     D: 500,
-//     M: 1000
-//   };
+var DIGIT_VALUES = {
+  I: 1,
+  V: 5,
+  X: 10,
+  L: 50,
+  C: 100,
+  D: 500,
+  M: 1000
+};
 
-function translateRomanNumeral (romanNumeral) {
-    // Write your code here, and
-    // return your final answer.
-  }
+function translateRomanNumeral(romanNumeral) {
+
+}
